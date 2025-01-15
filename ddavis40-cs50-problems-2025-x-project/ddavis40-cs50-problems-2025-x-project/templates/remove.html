@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Remove
+{% endblock %}
+
+{% block main %}
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>IGN</th>
+            <th>Tag</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for int in ints %}
+        <tr>
+            <td>{{ int.summ_name }}</td>
+            <td>{{ int.summ_tag }}</td>
+            <td>
+                <form action="/remove" method="post">
+                    <input name="puuid" type="hidden" value="{{ int.puuid }}">
+                    <button type="submit">Remove {{ int.summ_name }}</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+{% endblock %}

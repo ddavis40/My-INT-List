@@ -1,0 +1,17 @@
+{% extends "layout2.html" %}
+
+{% block title %}
+    Check
+{% endblock %}
+
+{% block main %}
+    <form action="/check" method="post">
+        <div class="mb-3">
+            <input autofocus class="form-control mx-auto w-auto" name="name" placeholder="Your IGN" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="tag" placeholder="NA1" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Check game</button>
+    </form>
+{% endblock %}
