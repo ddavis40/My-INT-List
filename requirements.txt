@@ -1,0 +1,9 @@
+cs50
+Flask
+Flask-Session
+pytz
+requests
+dotenv
+os
+werkzeug.security
+functools
